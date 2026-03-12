@@ -1,80 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrity Identification Index | III</title>
+    <style>
+        :root {
+            --midnight: #00172D;
+            --crimson: #B21E29;
+            --gold: #D4AF37;
+            --parchment: #F4F1EA;
+            --shadow-gray: #2C2C2C;
+        }
+        body {
+            background-color: var(--midnight);
+            color: white;
+            font-family: 'Times New Roman', serif; /* Professional, Legal feel */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(180deg, #002244 0%, var(--midnight) 100%);
+            padding: 40px;
+            border-bottom: 2px solid var(--gold);
+            text-align: center;
+        }
+        .hero-logo { width: 120px; }
+        .identity-anchor-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--gold);
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 4px;
+        }
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .tier-card {
+            background: #001f3f;
+            border-top: 4px solid var(--crimson);
+            padding: 20px;
+            transition: 0.3s;
+        }
+        .tier-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .cta-button {
+            background: var(--gold);
+            color: var(--midnight);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        footer {
+            background: #000a14;
+            padding: 60px;
+            border-top: 1px solid var(--gold);
+            font-size: 0.9em;
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+        }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: var(--gold); text-decoration: none; }
+        a:hover { color: white; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
 <header>
-  <div class="logo-container">
-    <img src="iii-shield-aegis.png" alt="Integrity Identification Index Logo">
-    <h1>Integrity Identification Index</h1>
-  </div>
-  <nav class="top-nav">
-    <a href="#">The Index</a>
-    <a href="#">Enterprise (EII)</a>
-    <a href="#">Research</a>
-    <a href="#">Anchor Identity (SSN/ID)</a>
-    <button class="login-btn">Log In</button>
-  </nav>
+    <img src="III_Logo_Shield.png" alt="III Shield Aegis" class="hero-logo">
+    <h1 style="color: var(--gold); letter-spacing: 2px;">INTEGRITY IDENTIFICATION INDEX</h1>
+    <p>A Records Subsidiary of Solomon Kin LLC | Division: Main-Legal_door</p>
+    <div style="margin-top: 20px;">
+        <a href="#" class="cta-button">ANCHOR IDENTITY (SSN REQUIRED)</a>
+    </div>
 </header>
 
+<main>
+    <section class="identity-anchor-box">
+        <h2 style="color: var(--gold);">The Character Asset Ledger</h2>
+        <p>This is a legally binding identity environment. Unlike social networks, the III uses mandatory government verification to link your <strong>Family Tree</strong> (Roots) to your <strong>Active Cape</strong> (Good Deeds). Once anchored, your identity is permanent, non-transferable, and verified by the III-Cipher.</p>
+    </section>
+
+    <section class="tier-grid">
+        <div class="tier-card">
+            <h3>Basic Anchor</h3>
+            <p><strong>$29.99 One-Time</strong></p>
+            <ul>
+                <li>Identity Verification (SSN/DL)</li>
+                <li>III-Cipher Issuance</li>
+                <li>Tree Mapping (Family)</li>
+            </ul>
+        </div>
+        <div class="tier-card">
+            <h3>Integrity Baseline</h3>
+            <p><strong>$75.00 Audit</strong></p>
+            <ul>
+                <li>Moral Self-Licensing Audit</li>
+                <li>Cape Utility Certification</li>
+                <li>Professional Trade Seal</li>
+            </ul>
+        </div>
+        <div class="tier-card" style="border-color: var(--gold);">
+            <h3>Sovereign Seal</h3>
+            <p><strong>$250.00 Annual</strong></p>
+            <ul>
+                <li>High-Level Character Passport</li>
+                <li>Enterprise Synergy Rights</li>
+                <li>Full Shadow Accountability</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
 <footer>
-  <div class="footer-grid">
-    
-    <div class="footer-column">
-      <h3>Region & Standards</h3>
-      <ul>
-        <li><a href="#">United States (Primary)</a></li>
-        <li><a href="#">Global Moral Benchmarks</a></li>
-        <li><a href="#">ISO/III Compliance</a></li>
-      </ul>
+    <div class="footer-links">
+        <div>
+            <h4>Region</h4>
+            <ul><li>United States</li><li>Global Standards</li></ul>
+        </div>
+        <div>
+            <h4>Solomon Kin LLC</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Main-Legal_door</a></li>
+                <li><a href="#">Trust Reports</a></li>
+                <li><a href="#">Investor Relations</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>The Cape (Individual)</h4>
+            <ul>
+                <li><a href="#">Identity Anchor Flow</a></li>
+                <li><a href="#">Document Good Deeds</a></li>
+                <li><a href="#">Tree/Heritage Mapping</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Enterprise (EII)</h4>
+            <ul>
+                <li><a href="#">Professional Trade Plans</a></li>
+                <li><a href="#">Educator Verification</a></li>
+                <li><a href="#">Enterprise Pricing</a></li>
+                <li><a href="#">Business API</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Legal & Privacy</h4>
+            <ul>
+                <li><a href="#">SSN Encryption Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Do Not Sell My Info</a></li>
+                <li><a href="#">Moral Self-Licensing Policy</a></li>
+            </ul>
+        </div>
     </div>
-
-    <div class="footer-column">
-      <h3>About Solomon Kin LLC</h3>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Subsidiary Directory</a></li>
-        <li><a href="#">Research & Sociology Blog</a></li>
-        <li><a href="#">Press & Trust Reports</a></li>
-        <li><a href="#">Investor Relations</a></li>
-        <li><a href="#">Contact Main-Legal_door</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h3>Individual (The Cape)</h3>
-      <ul>
-        <li><a href="#">How the Index Works</a></li>
-        <li><a href="#">Verification (SSN/ID Mandatory)</a></li>
-        <li><a href="#">Documenting Good Deeds</a></li>
-        <li><a href="#">Family Heritage (The Tree)</a></li>
-        <li><a href="#">Managing Your Shadow</a></li>
-        <li><a href="#">Help Center</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h3>Business & Enterprise</h3>
-      <ul>
-        <li><a href="#">Enterprise Integrity Index</a></li>
-        <li><a href="#">Trade & Educator Plans</a></li>
-        <li><a href="#">Verification Pricing</a></li>
-        <li><a href="#">Data Solutions & API</a></li>
-        <li><a href="#">Business Login</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h3>Legal & Security</h3>
-      <ul>
-        <li><a href="#">Privacy Policy (SSN Encryption)</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Moral Self-Licensing Guidelines</a></li>
-        <li><a href="#">System Integrity Status</a></li>
-        <li><a href="#">Cookie Preferences</a></li>
-        <li><a href="#">Do Not Sell My Info</a></li>
-        <li><a href="#">Modern Slavery Statement</a></li>
-      </ul>
-    </div>
-
-  </div>
-  
-  <div class="footer-bottom">
-    <p>© 2026 Integrity Identification Index, Inc. | Division: Main-Legal_door-Moral_Self_Licensing | A Solomon Kin LLC Subsidiary.</p>
-  </div>
+    <hr style="border: 0; border-top: 1px solid var(--gold); margin: 40px 0;">
+    <p style="text-align: center;">© 2026 Integrity Identification Index, Inc. | All Data Encrypted via Solomon Kin LLC Security Protocols.</p>
 </footer>
+
+</body>
+</html>
