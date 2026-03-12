@@ -3,186 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>III | Integrity Identification Index</title>
+    <title>iii | Integrity Identification Index</title>
     <style>
         :root {
             --gov-navy: #050B14;
             --prestige-gold: #B8860B;
-            --ceremonial-crimson: #5E0000;
             --parchment: #FDFDFD;
-            --border-weight: 1px solid rgba(184, 134, 11, 0.3);
+            --border-style: 1px solid rgba(184, 134, 11, 0.4);
         }
 
         body {
             background-color: var(--gov-navy);
             color: var(--parchment);
-            font-family: 'Times New Roman', Times, serif; /* Serifs for Authority */
+            font-family: 'Georgia', serif;
             margin: 0;
-            line-height: 1.6;
+            padding-top: 100px; /* Space for fixed header */
+            padding-bottom: 120px; /* Space for fixed footer */
+            line-height: 1.7;
         }
 
-        /* MASTER HEADER */
+        /* FIXED HEADER */
         header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background: rgba(5, 11, 20, 0.95);
+            border-bottom: var(--border-style);
             display: flex;
             align-items: center;
-            padding: 1rem 5%;
-            border-bottom: var(--border-weight);
-            height: 100px;
-            background: linear-gradient(to bottom, #0A1422, #050B14);
+            padding: 0 5%;
+            z-index: 1000;
+            box-sizing: border-box;
         }
 
-        .logo-container {
-            flex: 1;
-        }
-
-        .logo-text {
-            font-size: 4rem;
+        .logo-header {
+            font-size: 3.5rem;
             font-weight: bold;
             color: var(--prestige-gold);
-            letter-spacing: -4px;
-            text-transform: lowercase;
+            letter-spacing: -3px;
             font-family: serif;
+            text-transform: lowercase;
         }
 
-        nav {
-            display: flex;
-            gap: 2rem;
-            font-family: sans-serif;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-        }
-
-        nav a {
-            color: var(--parchment);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover { color: var(--prestige-gold); }
-
-        /* HERO SECTION */
-        .hero {
-            max-width: 1100px;
-            margin: 6rem auto;
-            text-align: center;
-            border: var(--border-weight);
-            padding: 4rem;
-            position: relative;
-        }
-
-        .hero::before {
-            content: "OFFICIAL RECORD";
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
+        /* FIXED FOOTER */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
             background: var(--gov-navy);
-            padding: 0 20px;
+            border-top: var(--border-style);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo-footer {
+            font-size: 2.5rem;
+            font-weight: bold;
             color: var(--prestige-gold);
-            font-size: 0.7rem;
-            letter-spacing: 4px;
+            letter-spacing: -2px;
+            font-family: serif;
+            text-transform: lowercase;
+            margin-bottom: 5px;
         }
 
-        h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            color: var(--parchment);
-            font-weight: normal;
+        .footer-subtext {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            color: rgba(184, 134, 11, 0.6);
+            text-transform: uppercase;
         }
 
-        .system-description {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 2rem auto;
-            color: #AAA;
+        /* CONTENT CONTAINERS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
 
-        /* PRICING TIERS - THE INVESTMENT */
-        .tier-grid {
+        .hero-banner {
+            text-align: center;
+            border-bottom: var(--border-style);
+            padding-bottom: 6rem;
+            margin-bottom: 6rem;
+        }
+
+        h1 { font-size: 3rem; letter-spacing: 2px; font-weight: normal; margin-bottom: 1rem; }
+        .sub-header { font-size: 0.9rem; color: var(--prestige-gold); letter-spacing: 5px; text-transform: uppercase; }
+
+        /* ENHANCED TIERS */
+        .tier-system {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1px;
-            background: var(--prestige-gold); /* Creates border effect */
-            max-width: 1100px;
-            margin: 4rem auto;
+            gap: 2rem;
         }
 
-        .tier-card {
-            background: var(--gov-navy);
-            padding: 3rem;
-            text-align: center;
+        .tier {
+            border: var(--border-style);
+            padding: 3rem 2rem;
+            background: linear-gradient(145deg, #070F1A, #050B14);
+            transition: transform 0.4s;
         }
 
-        .tier-title { color: var(--prestige-gold); font-size: 1.5rem; margin-bottom: 1rem; }
-        .tier-price { font-size: 2.5rem; margin-bottom: 2rem; }
+        .tier:hover { border-color: var(--prestige-gold); transform: translateY(-5px); }
+
+        .tier-name { color: var(--prestige-gold); font-size: 1.8rem; border-bottom: 1px solid rgba(184, 134, 11, 0.2); margin-bottom: 1.5rem; padding-bottom: 10px; }
         
-        .btn-gold {
-            display: inline-block;
-            padding: 1rem 2.5rem;
+        .metric-list { list-style: none; padding: 0; font-size: 0.85rem; text-align: left; margin: 2rem 0; }
+        .metric-list li { margin-bottom: 12px; padding-left: 20px; position: relative; }
+        .metric-list li::before { content: "•"; position: absolute; left: 0; color: var(--prestige-gold); }
+
+        .btn-action {
+            display: block;
+            padding: 1rem;
             border: 1px solid var(--prestige-gold);
-            color: var(--prestige-gold);
+            color: var(--parchment);
             text-decoration: none;
-            transition: 0.4s;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            transition: 0.3s;
         }
 
-        .btn-gold:hover { background: var(--prestige-gold); color: var(--gov-navy); }
+        .btn-action:hover { background: var(--prestige-gold); color: var(--gov-navy); }
 
-        footer {
-            text-align: center;
-            padding: 4rem;
-            opacity: 0.5;
-            font-size: 0.9rem;
-        }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container">
-        <span class="logo-text">iii</span>
-    </div>
-    <nav>
-        <a href="#system">The System</a>
-        <a href="#verify">Verification</a>
-        <a href="#enterprise">Enterprise</a>
-        <a href="#sovereign">Sovereign</a>
-    </nav>
+    <div class="logo-header">iii</div>
 </header>
 
-<main>
-    <section class="hero">
-        <h1>The Mandate of Integrity</h1>
-        <p class="system-description">
-            Integrity is not a feeling; it is a measurable asset. The Integrity Identification Index (III) provides the infrastructure to anchor your identity, verify your character, and market your most valuable resource: Your Truth.
+<div class="container">
+    <section class="hero-banner">
+        <div class="sub-header">Official Trust Infrastructure</div>
+        <h1>The Integrity Identification Index</h1>
+        <p style="max-width: 800px; margin: 2rem auto; color: #999;">
+            In a landscape of social entropy, your character is your only immutable asset. The iii system is the definitive snapshot of a person's motive, stewardship, and reliability—a tool used to distinguish the sovereign from the standard.
         </p>
-        <a href="#tiers" class="btn-gold">Initiate Identity Anchor</a>
     </section>
 
-    <div class="tier-grid" id="tiers">
-        <div class="tier-card">
-            <div class="tier-title">THE ANCHOR</div>
-            <div class="tier-price">$29.99</div>
-            <p>Mandatory SSN/ID Verification. Issuance of your Unique III-Cipher.</p>
-            <a href="#" class="btn-gold">Begin</a>
+    <div class="tier-system">
+        <div class="tier">
+            <div class="tier-name">The Anchor</div>
+            <div style="font-size: 2rem; margin-bottom: 1rem;">$29.99</div>
+            <p style="font-size: 0.9rem; color: #CCC;">*Identity Stabilization*</p>
+            <ul class="metric-list">
+                <li>Federal ID Synchronization</li>
+                <li>Issuance of the Global III-Cipher</li>
+                <li>Verification of Physical Residency</li>
+                <li>Baseline Background Cleansing</li>
+            </ul>
+            <p style="font-size: 0.75rem; font-style: italic;">Strategy: Use to prove you exist as a verified, accountable citizen in private trade and basic employment.</p>
+            <a href="#" class="btn-action">Anchor Profile</a>
         </div>
-        <div class="tier-card" style="border-left: 1px solid var(--prestige-gold); border-right: 1px solid var(--prestige-gold);">
-            <div class="tier-title">THE BASELINE</div>
-            <div class="tier-price">$75.00</div>
-            <p>Full Moral Audit & Psychometric Scoring. Establishing the First Cape.</p>
-            <a href="#" class="btn-gold">Audit</a>
+
+        <div class="tier">
+            <div class="tier-name">The Baseline</div>
+            <div style="font-size: 2rem; margin-bottom: 1rem;">$75.00</div>
+            <p style="font-size: 0.9rem; color: #CCC;">*Character Assessment*</p>
+            <ul class="metric-list">
+                <li>Active Moral Audit (Psychometric)</li>
+                <li>Stewardship History Verification</li>
+                <li>Duty-to-Resume Accuracy Mapping</li>
+                <li>Conflict Resolution Analysis</li>
+            </ul>
+            <p style="font-size: 0.75rem; font-style: italic;">Strategy: A tool for the career-driven individual to bypass standard interviews by providing a "Verified Cape" of past performance.</p>
+            <a href="#" class="btn-action">Initiate Audit</a>
         </div>
-        <div class="tier-card">
-            <div class="tier-title">SOVEREIGN</div>
-            <div class="tier-price">$250.00</div>
-            <p>Annual Stewardship Certification. Priority High-Stakes Credentials.</p>
-            <a href="#" class="btn-gold">Ascend</a>
+
+        <div class="tier">
+            <div class="tier-name">Sovereign</div>
+            <div style="font-size: 2rem; margin-bottom: 1rem;">$250.00</div>
+            <p style="font-size: 0.9rem; color: #CCC;">*Legacy Stewardship*</p>
+            <ul class="metric-list">
+                <li>Annual Character Maintenance</li>
+                <li>Multi-Entity Verification (TFI/HUI)</li>
+                <li>High-Stakes Leadership Credential</li>
+                <li>Legal Shadow Mediation Services</li>
+            </ul>
+            <p style="font-size: 0.75rem; font-style: italic;">Strategy: For those who understand that elite status requires elite proof. Used between family, high-wealth investors, and community pillars.</p>
+            <a href="#" class="btn-action">Attain Status</a>
         </div>
     </div>
-</main>
+</div>
 
 <footer>
-    © 2026 SOLOMON KIN LLC | Philadelphia | TRUSTED BY THE SOVEREIGN INDIVIDUAL
+    <div class="logo-footer">iii</div>
+    <div class="footer-subtext">Solomon Kin LLC | Integrity Verified</div>
 </footer>
 
 </body>
