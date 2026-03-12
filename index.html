@@ -3,100 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrity Identification Index | Solomon Kin LLC</title>
-    <link rel="stylesheet" href="style.css">
+    <title>III | Integrity Identification Index</title>
     <style>
         :root {
-            --navy: #0A192F;
-            --gold: #C5A059;
-            --crimson: #8B0000;
-            --white: #F4F4F4;
+            --gov-navy: #050B14;
+            --prestige-gold: #B8860B;
+            --ceremonial-crimson: #5E0000;
+            --parchment: #FDFDFD;
+            --border-weight: 1px solid rgba(184, 134, 11, 0.3);
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--navy);
-            color: var(--white);
+            background-color: var(--gov-navy);
+            color: var(--parchment);
+            font-family: 'Times New Roman', Times, serif; /* Serifs for Authority */
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            line-height: 1.6;
         }
+
+        /* MASTER HEADER */
         header {
-            width: 100%;
-            padding: 2rem 0;
-            text-align: center;
-            border-bottom: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            padding: 1rem 5%;
+            border-bottom: var(--border-weight);
+            height: 100px;
+            background: linear-gradient(to bottom, #0A1422, #050B14);
         }
-        .hero {
-            padding: 4rem 2rem;
-            text-align: center;
-            max-width: 800px;
+
+        .logo-container {
+            flex: 1;
         }
-        h1 { color: var(--gold); font-size: 2.5rem; letter-spacing: 2px; }
-        .tagline { font-style: italic; color: var(--gold); margin-bottom: 2rem; }
-        .btn-container { display: flex; gap: 20px; justify-content: center; }
-        .btn {
-            padding: 1rem 2rem;
-            text-decoration: none;
+
+        .logo-text {
+            font-size: 4rem;
             font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
+            color: var(--prestige-gold);
+            letter-spacing: -4px;
+            text-transform: lowercase;
+            font-family: serif;
         }
-        .btn-anchor { background-color: var(--gold); color: var(--navy); }
-        .btn-anchor:hover { background-color: #e6bc6a; }
-        .btn-basic { border: 2px solid var(--gold); color: var(--gold); }
-        .btn-basic:hover { background-color: var(--gold); color: var(--navy); }
-        
-        .system-preview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        nav {
+            display: flex;
             gap: 2rem;
-            margin-top: 4rem;
-            width: 90%;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
         }
-        .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-left: 4px solid var(--crimson);
+
+        nav a {
+            color: var(--parchment);
+            text-decoration: none;
+            transition: color 0.3s;
         }
-        footer { margin-top: 4rem; padding: 2rem; font-size: 0.8rem; color: #888; }
+
+        nav a:hover { color: var(--prestige-gold); }
+
+        /* HERO SECTION */
+        .hero {
+            max-width: 1100px;
+            margin: 6rem auto;
+            text-align: center;
+            border: var(--border-weight);
+            padding: 4rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "OFFICIAL RECORD";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gov-navy);
+            padding: 0 20px;
+            color: var(--prestige-gold);
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: var(--parchment);
+            font-weight: normal;
+        }
+
+        .system-description {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 2rem auto;
+            color: #AAA;
+        }
+
+        /* PRICING TIERS - THE INVESTMENT */
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--prestige-gold); /* Creates border effect */
+            max-width: 1100px;
+            margin: 4rem auto;
+        }
+
+        .tier-card {
+            background: var(--gov-navy);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .tier-title { color: var(--prestige-gold); font-size: 1.5rem; margin-bottom: 1rem; }
+        .tier-price { font-size: 2.5rem; margin-bottom: 2rem; }
+        
+        .btn-gold {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--prestige-gold);
+            color: var(--prestige-gold);
+            text-decoration: none;
+            transition: 0.4s;
+        }
+
+        .btn-gold:hover { background: var(--prestige-gold); color: var(--gov-navy); }
+
+        footer {
+            text-align: center;
+            padding: 4rem;
+            opacity: 0.5;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">SOLOMON KIN LLC</div>
-    </header>
+<header>
+    <div class="logo-container">
+        <span class="logo-text">iii</span>
+    </div>
+    <nav>
+        <a href="#system">The System</a>
+        <a href="#verify">Verification</a>
+        <a href="#enterprise">Enterprise</a>
+        <a href="#sovereign">Sovereign</a>
+    </nav>
+</header>
 
+<main>
     <section class="hero">
-        <h1>Integrity Identification Index</h1>
-        <p class="tagline">"Truth is Value. Identity is Responsibility."</p>
-        <p>Welcome to the global ledger of human character. Secure your identity, verify your deeds, and anchor your legacy in a world of fragmented trust.</p>
-        
-        <div class="btn-container">
-            <a href="onboarding.html" class="btn btn-anchor">Anchor Your Identity</a>
-            <a href="about.html" class="btn btn-basic">Learn About the Index</a>
-        </div>
+        <h1>The Mandate of Integrity</h1>
+        <p class="system-description">
+            Integrity is not a feeling; it is a measurable asset. The Integrity Identification Index (III) provides the infrastructure to anchor your identity, verify your character, and market your most valuable resource: Your Truth.
+        </p>
+        <a href="#tiers" class="btn-gold">Initiate Identity Anchor</a>
     </section>
 
-    <section class="system-preview">
-        <div class="feature-card">
-            <h3>The III-Cipher</h3>
-            <p>A unique, non-reversible identity key linked to your verified credentials. Your professional fingerprint.</p>
+    <div class="tier-grid" id="tiers">
+        <div class="tier-card">
+            <div class="tier-title">THE ANCHOR</div>
+            <div class="tier-price">$29.99</div>
+            <p>Mandatory SSN/ID Verification. Issuance of your Unique III-Cipher.</p>
+            <a href="#" class="btn-gold">Begin</a>
         </div>
-        <div class="feature-card">
-            <h3>The Crimson Cape</h3>
-            <p>A verified record of your good deeds, civic duty, and professional stewardship. Prove your value.</p>
+        <div class="tier-card" style="border-left: 1px solid var(--prestige-gold); border-right: 1px solid var(--prestige-gold);">
+            <div class="tier-title">THE BASELINE</div>
+            <div class="tier-price">$75.00</div>
+            <p>Full Moral Audit & Psychometric Scoring. Establishing the First Cape.</p>
+            <a href="#" class="btn-gold">Audit</a>
         </div>
-        <div class="feature-card">
-            <h3>The Legacy Shadow</h3>
-            <p>A private, secure space for personal accountability and growth mapping. Own your narrative.</p>
+        <div class="tier-card">
+            <div class="tier-title">SOVEREIGN</div>
+            <div class="tier-price">$250.00</div>
+            <p>Annual Stewardship Certification. Priority High-Stakes Credentials.</p>
+            <a href="#" class="btn-gold">Ascend</a>
         </div>
-    </section>
+    </div>
+</main>
 
-    <footer>
-        &copy; 2026 Solomon Kin LLC | Private Trust Infrastructure | Philadelphia, PA
-    </footer>
+<footer>
+    © 2026 SOLOMON KIN LLC | Philadelphia | TRUSTED BY THE SOVEREIGN INDIVIDUAL
+</footer>
 
 </body>
 </html>
