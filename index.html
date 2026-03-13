@@ -3,267 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>III | The Global Standard for Character Verification</title>
+    <title>III | Sovereign Integrity Ledger & Identity Anchor</title>
     <style>
         :root {
-            --midnight: #00172D;
-            --gold: #D4AF37;
-            --crimson: #B21E29;
-            --slate: #E1E8ED;
-            --deep-black: #000a14;
+            --midnight: #001224; /* Deep Federal Navy */
+            --gold: #C5A059;     /* Burnished Executive Gold */
+            --gold-light: #E1C18D;
+            --crimson: #8B0000;  /* Deep Blood Red for Legal Seals */
+            --parchment: #F2F2F2;
+            --slate: #D1D9E0;
         }
 
         body {
             background-color: var(--midnight);
             color: var(--slate);
-            font-family: 'Georgia', serif;
+            font-family: 'Times New Roman', Times, serif; /* Absolute Legal Standard */
             margin: 0;
             padding: 0;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        /* Top Navigation: Professional & Sparse */
-        .navbar {
+        /* Sovereign Header */
+        .federal-header {
             position: fixed;
             top: 0;
             width: 100%;
-            height: 80px;
-            background: rgba(0, 23, 45, 0.98);
-            border-bottom: 1px solid var(--gold);
+            height: 110px;
+            background: var(--midnight);
+            border-bottom: 3px solid var(--gold);
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 60px;
             z-index: 1000;
-            box-sizing: border-box;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
 
-        .nav-brand { color: var(--gold); font-size: 2.2rem; font-weight: bold; text-decoration: none; letter-spacing: 5px; }
-        .nav-links { display: flex; gap: 40px; }
-        .nav-links a { color: var(--slate); text-decoration: none; text-transform: uppercase; font-size: 0.8rem; font-weight: bold; letter-spacing: 1px; transition: 0.3s; }
-        .nav-links a:hover { color: var(--gold); }
-        .anchor-action { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold) !important; }
+        .header-left { display: flex; align-items: center; }
+        .header-left img { height: 80px; margin-right: 20px; } /* Enlarged Logo */
+        .brand-text { color: var(--gold); font-size: 2.5rem; font-weight: bold; letter-spacing: 6px; }
 
-        /* Hero: The Case for Necessity */
+        .nav-cluster { display: flex; gap: 20px; }
+        .nav-btn {
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+        .nav-btn:hover { background: var(--gold); color: var(--midnight); }
+        .btn-active { background: var(--gold); color: var(--midnight); }
+
+        /* Document Hero */
         .hero {
-            padding: 200px 15% 120px;
+            padding: 220px 15% 100px;
             text-align: center;
-            background: radial-gradient(circle at center, #002b55 0%, var(--midnight) 80%);
+            border-bottom: 1px solid var(--gold);
         }
 
-        h1 { font-size: 4rem; color: var(--gold); margin: 0; line-height: 1.1; }
-        .hero p { font-size: 1.3rem; max-width: 900px; margin: 30px auto; color: #a5b1c2; }
+        .hero h1 { font-size: 4rem; color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 4px; }
+        .hero-sub { color: var(--crimson); font-weight: bold; font-size: 1.2rem; margin-top: 10px; letter-spacing: 3px; }
+        .hero-desc { max-width: 900px; margin: 40px auto; font-size: 1.25rem; font-style: italic; color: var(--slate); }
 
-        /* Benefits: Defining the Need */
-        .need-section {
-            padding: 100px 10%;
-            background: var(--deep-black);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+        /* Legal Necessity Section */
+        .legal-context {
+            padding: 80px 15%;
+            background: #000a14;
+            border-bottom: 1px solid var(--gold);
         }
 
-        .benefit-card { margin-bottom: 40px; }
-        .benefit-card h3 { color: var(--gold); font-size: 1.8rem; margin-bottom: 10px; border-left: 4px solid var(--crimson); padding-left: 15px; }
+        .context-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .context-box h3 { color: var(--gold); border-bottom: 2px solid var(--crimson); padding-bottom: 10px; font-size: 1.8rem; }
 
-        /* The Paid Tier System: Enhanced Detail */
-        .tier-container {
-            padding: 100px 5%;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .tier-box {
-            flex: 1;
-            min-width: 340px;
-            background: #001a33;
-            border: 1px solid #1a3a5a;
+        /* Tiered Records Management */
+        .records-section { padding: 100px 10%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        
+        .record-tier {
+            border: 2px solid #1a3a5a;
             padding: 60px 40px;
-            transition: 0.4s;
+            background: linear-gradient(145deg, #00172d, #000a14);
             position: relative;
         }
 
-        .tier-box:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .tier-box.featured { border: 2px solid var(--gold); box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); }
-        .tier-label { position: absolute; top: 20px; right: 20px; color: var(--gold); font-size: 0.7rem; letter-spacing: 2px; }
+        .record-tier:hover { border-color: var(--gold); }
+        .record-tier h2 { color: var(--gold); font-size: 2rem; margin: 0; border-bottom: 1px solid var(--gold); padding-bottom: 20px; }
+        .record-cost { font-size: 2.8rem; color: var(--gold); margin: 30px 0; font-family: 'Arial', sans-serif; }
+        
+        .detailed-specs { list-style: none; padding: 0; margin-bottom: 40px; }
+        .detailed-specs li { margin-bottom: 18px; font-size: 0.95rem; border-bottom: 1px solid rgba(197, 160, 89, 0.1); padding-bottom: 8px; }
+        .detailed-specs strong { color: var(--gold-light); }
 
-        .price-display { font-size: 3rem; color: var(--gold); margin: 30px 0; }
-        .benefit-list { list-style: none; padding: 0; margin-bottom: 40px; font-size: 0.95rem; }
-        .benefit-list li { margin-bottom: 15px; padding-left: 25px; position: relative; }
-        .benefit-list li::before { content: '◈'; position: absolute; left: 0; color: var(--crimson); }
-
-        .cta-gold {
+        .execute-btn {
             display: block;
             background: var(--gold);
             color: var(--midnight);
             text-align: center;
-            padding: 18px;
+            padding: 20px;
             font-weight: bold;
-            text-decoration: none;
             text-transform: uppercase;
+            text-decoration: none;
             letter-spacing: 2px;
         }
 
-        /* Footer Links & Legal */
+        /* Sovereign Footer */
         footer {
-            background: #00050a;
-            padding: 120px 60px 40px;
-            border-top: 2px solid var(--gold);
+            background: #000;
+            padding: 120px 60px 60px;
+            border-top: 5px solid var(--gold);
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 50px;
-            margin-bottom: 100px;
+        .footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 100px; }
+        .footer-nav h4 { color: var(--gold); text-transform: uppercase; margin-bottom: 30px; }
+        .footer-nav ul { list-style: none; padding: 0; font-size: 0.85rem; }
+        .footer-nav li { margin-bottom: 15px; }
+        .footer-nav a { color: var(--slate); text-decoration: none; opacity: 0.7; }
+        .footer-nav a:hover { opacity: 1; color: var(--gold); }
+
+        .footer-seal-block {
+            text-align: center;
+            border-top: 1px solid rgba(197, 160, 89, 0.3);
+            padding-top: 80px;
         }
 
-        .footer-col h4 { color: var(--gold); text-transform: uppercase; font-size: 0.85rem; margin-bottom: 30px; letter-spacing: 1px; }
-        .footer-col ul { list-style: none; padding: 0; }
-        .footer-col li { margin-bottom: 15px; font-size: 0.85rem; }
-        .footer-col a { color: var(--slate); text-decoration: none; transition: 0.2s; }
-        .footer-col a:hover { color: var(--gold); padding-left: 5px; }
-
-        .master-footer { text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.1); padding-top: 60px; }
-        .master-footer img { height: 120px; margin-bottom: 30px; opacity: 0.9; }
+        .footer-seal-block img { height: 150px; margin-bottom: 40px; } /* Enlarged Logo */
+        .seal-caption { color: var(--gold); font-weight: bold; letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="#" class="nav-links">
-            <a href="#">Science of Integrity</a>
-            <a href="#">Enterprise Solutions</a>
-            <a href="#">The Legal Door</a>
-            <a href="#" class="anchor-action">Anchor Identity</a>
-        </a>
-        <a href="#" class="nav-brand">iii</a>
-    </nav>
-
-    <header class="hero">
-        <h1>Your Character is Your Most Valuable Asset.</h1>
-        <p>In an era of digital anonymity, the <strong>Integrity Identification Index</strong> is the global gold standard for human verification. We don't just verify who you are; we certify the value of what you've done.</p>
+    <header class="federal-header">
+        <div class="header-left">
+            <img src="iii.png" alt="Integrity Identification Index Logo">
+            <span class="brand-text">iii</span>
+        </div>
+        <div class="nav-cluster">
+            <a href="#" class="nav-btn">Sovereign Science</a>
+            <a href="#" class="nav-btn">Enterprise Entry</a>
+            <a href="#" class="nav-btn">Legal Chamber</a>
+            <a href="#" class="nav-btn btn-active">Anchor Identity</a>
+        </div>
     </header>
 
-    <section class="need-section">
-        <div>
-            <h2 style="color: var(--gold); font-size: 2.5rem;">Why You Need the Index</h2>
-            <p>Traditional background checks only look for what you did wrong. The III looks for what you do right. Without an <strong>Identity Anchor</strong>, your legacy is undocumented and your character is unverified.</p>
-        </div>
-        <div>
-            <div class="benefit-card">
-                <h3>Absolute Credibility</h3>
-                <p>Instantly differentiate yourself in competitive job markets. When a company sees the III-Cipher, they see a person of verified reliability.</p>
+    <section class="hero">
+        <h1>Integrity Identification Index</h1>
+        <div class="hero-sub">Official Character Record Subsidiary of Solomon Kin LLC</div>
+        <p class="hero-desc">
+            "An unverified identity is a liability. A verified character is an asset." 
+            The III provides the global infrastructure for the permanent archival of human integrity metrics, 
+            ensuring that character remains a portable and protected legal estate.
+        </p>
+    </section>
+
+    <section class="legal-context">
+        <div class="context-grid">
+            <div class="context-box">
+                <h3>The Professional Mandate</h3>
+                <p>In high-stakes industries—education, trade, and enterprise—standard background checks are insufficient. The III-Cipher provides a 360-degree verification of <strong>Identity Roots (The Tree)</strong> and <strong>Heroic Utility (The Cape)</strong>, establishing immediate sovereign trust between parties.</p>
             </div>
-            <div class="benefit-card">
-                <h3>Relational Security</h3>
-                <p>Build instant trust with new connections, partners, and communities. Your "Cape" serves as your moral passport.</p>
-            </div>
-            <div class="benefit-card">
-                <h3>Legacy Archival</h3>
-                <p>Protect your family heritage through the "Tree Protocol." Ensure your good deeds are a permanent record in the Solomon Kin LLC Ledger.</p>
+            <div class="context-box">
+                <h3>The Character Estate</h3>
+                <p>We treat your reputation as a physical asset. Through our <strong>Main-Legal_door</strong> protocols, your verified history of good deeds is encrypted and archived, providing a non-fungible record of your moral standing across all jurisdictions.</p>
             </div>
         </div>
     </section>
 
-    <section class="tier-container">
-        <div class="tier-box">
-            <span class="tier-label">LEVEL 01</span>
-            <h3>IDENTITY ANCHOR</h3>
-            <div class="price-display">$29.99</div>
-            <ul class="benefit-list">
-                <li>Direct Government ID & SSN Encryption</li>
-                <li>Generation of Unique 12-Digit III-Cipher</li>
-                <li>Family Tree (Root) Digital Archival</li>
-                <li>Portable Digital Identity Badge</li>
+    <section class="records-section">
+        <div class="record-tier">
+            <h2>01 | IDENTITY ANCHOR</h2>
+            <div class="record-cost">$29.99</div>
+            <ul class="detailed-specs">
+                <li><strong>Statutory Verification:</strong> Integration of SSN, Passport, and State-issued credentials.</li>
+                <li><strong>Cipher Issuance:</strong> Unique 12-digit alphanumeric Identity Anchor Key.</li>
+                <li><strong>Hereditary Mapping:</strong> Digital archival of familial lineage and heritage roots.</li>
+                <li><strong>Digital Effect:</strong> Basic integrity badge for personal and professional profiles.</li>
             </ul>
-            <a href="#" class="cta-gold">Commence Anchor</a>
+            <a href="#" class="execute-btn">Initiate Anchor</a>
         </div>
 
-        <div class="tier-box featured">
-            <span class="tier-label">LEVEL 02 | PREFERRED</span>
-            <h3>INTEGRITY AUDIT</h3>
-            <div class="price-display">$75.00</div>
-            <ul class="benefit-list">
-                <li>All Identity Anchor Features Included</li>
-                <li>Proprietary Moral Self-Licensing Audit</li>
-                <li>Full "Cape" Ledger Verification (Good Deeds)</li>
-                <li>Certified for Trades, Educators, and Professionals</li>
-                <li>Quarterly Integrity Score Updates</li>
+        <div class="record-tier" style="border-color: var(--gold);">
+            <h2>02 | INTEGRITY AUDIT</h2>
+            <div class="record-cost">$75.00</div>
+            <ul class="detailed-specs">
+                <li><strong>Moral Audit:</strong> Full assessment of Internal vs. External integrity thresholds.</li>
+                <li><strong>Cape Documentation:</strong> Formal legal certification of verified societal contributions.</li>
+                <li><strong>Industry Licensing:</strong> Certified status for Educators and Professional Trade Practitioners.</li>
+                <li><strong>Self-Licensing Check:</strong> Annual mitigation of moral self-licensing behaviors.</li>
             </ul>
-            <a href="#" class="cta-gold">Execute Audit</a>
+            <a href="#" class="execute-btn">Commence Audit</a>
         </div>
 
-        <div class="tier-box">
-            <span class="tier-label">LEVEL 03</span>
-            <h3>SOVEREIGN SEAL</h3>
-            <div class="price-display">$250.00</div>
-            <ul class="benefit-list">
-                <li>All Audit & Anchor Features Included</li>
-                <li>Full Character Estate Management</li>
-                <li>Direct Enterprise Synergy (B2B Networking)</li>
-                <li>Mitigation Strategies for "Shadow" Indicators</li>
-                <li>Highest-Level Priority in the Global Ledger</li>
+        <div class="record-tier">
+            <h2>03 | SOVEREIGN SEAL</h2>
+            <div class="record-cost">$250.00</div>
+            <ul class="detailed-specs">
+                <li><strong>Estate Management:</strong> Full-service character record security and high-vault storage.</li>
+                <li><strong>Enterprise Synergy:</strong> Exclusive B2B networking rights with EII-Certified corporations.</li>
+                <li><strong>Shadow Mitigation:</strong> Professional analysis and reduction of character risk indicators.</li>
+                <li><strong>Sovereign Priority:</strong> The highest echelon of character verification in the Global Ledger.</li>
             </ul>
-            <a href="#" class="cta-gold">Obtain Sovereignty</a>
+            <a href="#" class="execute-btn">Obtain Sovereign Seal</a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Parentage</h4>
+        <div class="footer-nav">
+            <div>
+                <h4>Holdings</h4>
                 <ul>
                     <li><a href="#">Solomon Kin LLC</a></li>
                     <li><a href="#">Main-Legal_door</a></li>
-                    <li><a href="#">Research & Development</a></li>
                     <li><a href="#">Sovereign Holdings</a></li>
+                    <li><a href="#">R&D Sociology</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Identity Flow</h4>
+            <div>
+                <h4>The Index</h4>
                 <ul>
-                    <li><a href="#">Identity Anchor (SSN)</a></li>
+                    <li><a href="#">Anchor Identity</a></li>
                     <li><a href="#">The Tree Protocol</a></li>
                     <li><a href="#">The Cape Ledger</a></li>
-                    <li><a href="#">Verification Retrieval</a></li>
+                    <li><a href="#">Cipher Retrieval</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>B2B / Enterprise</h4>
+            <div>
+                <h4>Enterprise</h4>
                 <ul>
-                    <li><a href="#">Corporate Ratings (EII)</a></li>
-                    <li><a href="#">Data Solutions API</a></li>
-                    <li><a href="#">Educator Benchmarking</a></li>
-                    <li><a href="#">Professional Trade Link</a></li>
+                    <li><a href="#">EII Corporate Rating</a></li>
+                    <li><a href="#">B2B Integration API</a></li>
+                    <li><a href="#">Educator Verification</a></li>
+                    <li><a href="#">Trade Certifications</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
+            <div>
                 <h4>Support</h4>
                 <ul>
-                    <li><a href="#">Help Center</a></li>
                     <li><a href="#">Dispute Resolution</a></li>
                     <li><a href="#">Character Appeals</a></li>
+                    <li><a href="#">Vault Support</a></li>
                     <li><a href="#">System Status</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Legal Door</h4>
+            <div>
+                <h4>Statutory</h4>
                 <ul>
-                    <li><a href="#">Privacy (SSN Vault)</a></li>
+                    <li><a href="#">Privacy (Vault Tech)</a></li>
                     <li><a href="#">Terms of Character</a></li>
                     <li><a href="#">Self-Licensing Policy</a></li>
-                    <li><a href="#">Compliance Guidelines</a></li>
+                    <li><a href="#">Legal Compliance</a></li>
                 </ul>
             </div>
         </div>
-        
-        <div class="master-footer">
-            <img src="iii.png" alt="Official III Logo">
-            <p style="color: var(--gold); letter-spacing: 2px; font-size: 0.8rem;">© 2026 Integrity Identification Index, Inc. | All Records Managed by Solomon Kin LLC.</p>
+
+        <div class="footer-seal-block">
+            <img src="iii.png" alt="Integrity Identification Index Official Seal">
+            <div class="seal-caption">Official Seal of Character Verification</div>
+            <p style="font-size: 0.75rem; opacity: 0.5; margin-top: 20px;">
+                © 2026 Integrity Identification Index, Inc. | Division: Main-Legal_door | A Solomon Kin LLC Subsidiary.
+                All records are archived under Federal Privacy and Character Security Protocols.
+            </p>
         </div>
     </footer>
 
