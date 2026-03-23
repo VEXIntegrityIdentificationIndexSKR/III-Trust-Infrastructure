@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III | My Sovereign Ledger</title>
+    <style>
+        :root {
+            --midnight: #001224;
+            --gold: #C5A059;
+            --crimson: #8B0000;
+            --slate: #D1D9E0;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            background-color: var(--midnight);
+            color: var(--slate);
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Vertical Security Sidebar */
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            background: #000a14;
+            border-right: 1px solid var(--gold);
+            padding: 40px 20px;
+            position: fixed;
+        }
+
+        .sidebar-logo { font-size: 2.5rem; color: var(--gold); font-weight: bold; letter-spacing: 5px; margin-bottom: 50px; display: block; text-decoration: none; }
+        
+        .nav-item {
+            display: block;
+            padding: 15px;
+            color: var(--slate);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-item:hover { color: var(--gold); background: var(--glass); }
+
+        /* Main Dashboard Area */
+        .main-content {
+            margin-left: 280px;
+            padding: 60px;
+            width: 100%;
+        }
+
+        .header-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            border: 1px solid var(--gold);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stat-value { font-size: 2.5rem; color: var(--gold); font-weight: bold; }
+        .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--crimson); }
+
+        /* Visualizing the Index */
+        .visual-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .ledger-box {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid #1a3a5a;
+            padding: 40px;
+        }
+
+        .ledger-box h3 { color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 15px; margin-top: 0; }
+
+        /* Status Tags */
+        .status-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            border: 1px solid var(--gold);
+            font-size: 0.7rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <a href="#" class="sidebar-logo">iii</a>
+        <nav>
+            <a href="#" class="nav-item">Identity Anchor</a>
+            <a href="#" class="nav-item">Tree Protocol</a>
+            <a href="#" class="nav-item">The Cape Ledger</a>
+            <a href="#" class="nav-item">Shadow Mitigation</a>
+            <a href="#" class="nav-item">Sovereign Vault</a>
+            <a href="#" class="nav-item" style="margin-top: 50px; color: var(--crimson);">Terminate Session</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+            <h1 style="color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 3px;">Sovereign Ledger</h1>
+            <div style="font-family: monospace; color: var(--gold);">CIPHER: III-772-GRN-9</div>
+        </div>
+
+        <section class="header-stats">
+            <div class="stat-card">
+                <div class="stat-label">Integrity Index</div>
+                <div class="stat-value">4.82</div>
+                <div class="status-tag">Top 5% Global</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Cape Utility</div>
+                <div class="stat-value">128</div>
+                <div class="status-tag">Verified Deeds</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Tree Depth</div>
+                <div class="stat-value">Level 4</div>
+                <div class="status-tag">Sovereign Heritage</div>
+            </div>
+        </section>
+
+        <div class="visual-grid">
+            <div class="ledger-box">
+                <h3>The Cape Ledger (Recent Utility)</h3>
+                <p style="font-size: 0.9rem; font-style: italic; color: #888;">Recent verified actions documenting your character asset growth.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <strong>Mar 2026:</strong> Community Resource Allocation (Verified) <span style="float: right; color: var(--gold);">+0.04</span>
+                    </li>
+                    <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <strong>Feb 2026:</strong> Professional Trade Excellence Certification <span style="float: right; color: var(--gold);">+0.12</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ledger-box" style="border-color: var(--crimson);">
+                <h3 style="color: var(--crimson); border-color: var(--crimson);">Shadow Indicators</h3>
+                <p style="font-size: 0.8rem;">Areas flagged for Moral Self-Licensing risk. Proactive mitigation recommended.</p>
+                <div style="background: rgba(139, 0, 0, 0.1); padding: 15px; border: 1px solid var(--crimson);">
+                    <span style="color: var(--crimson); font-weight: bold;">ALERT:</span> Proximity licensing detected. High utility followed by decreased internal audit scores.
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
