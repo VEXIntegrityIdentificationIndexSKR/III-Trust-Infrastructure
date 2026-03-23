@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III | Heritage Retrieval & Estate Execution</title>
+    <style>
+        :root {
+            --midnight: #000a14;
+            --gold: #C5A059;
+            --crimson: #8B0000;
+            --deep-navy: #001224;
+            --slate: #D1D9E0;
+        }
+
+        body {
+            background-color: var(--midnight);
+            color: var(--slate);
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        /* Sovereign Header */
+        .federal-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--midnight);
+            border-bottom: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            z-index: 1000;
+        }
+
+        .header-left { display: flex; align-items: center; text-decoration: none; }
+        .header-left img { height: 75px; margin-right: 20px; }
+        .brand-text { color: var(--gold); font-size: 2.2rem; font-weight: bold; letter-spacing: 5px; }
+
+        /* Vault Hero */
+        .vault-hero {
+            padding: 200px 15% 80px;
+            text-align: center;
+            background: radial-gradient(circle at top, var(--deep-navy) 0%, var(--midnight) 100%);
+        }
+
+        h1 { font-size: 3.5rem; color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 4px; }
+        .vault-status { color: var(--crimson); font-weight: bold; letter-spacing: 3px; margin-top: 10px; font-size: 0.9rem; }
+
+        /* Successor Protocol */
+        .protocol-section {
+            padding: 80px 15%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            background: var(--deep-navy);
+            border-top: 1px solid var(--gold);
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .protocol-card { border-left: 2px solid var(--gold); padding-left: 30px; }
+        .protocol-card h3 { color: var(--gold); text-transform: uppercase; font-size: 1.5rem; }
+
+        /* Access Terminal */
+        .access-terminal {
+            padding: 100px 20%;
+            text-align: center;
+        }
+
+        .terminal-box {
+            border: 1px solid var(--gold);
+            padding: 60px;
+            background: rgba(197, 160, 89, 0.02);
+            position: relative;
+        }
+
+        .terminal-box::before {
+            content: "ARCHIVAL ACCESS ONLY";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--midnight);
+            padding: 0 20px;
+            color: var(--crimson);
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .input-field {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 15px;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .action-btn {
+            background: var(--gold);
+            color: var(--midnight);
+            padding: 20px 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            letter-spacing: 3px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #000;
+            padding: 120px 60px 40px;
+            border-top: 5px solid var(--gold);
+            text-align: center;
+        }
+
+        .footer-seal { height: 180px; margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+    <header class="federal-header">
+        <a href="index.html" class="header-left">
+            <img src="iii.png" alt="III Official Logo">
+            <span class="brand-text">iii</span>
+        </a>
+    </header>
+
+    <section class="vault-hero">
+        <h1>The Heritage Retrieval Vault</h1>
+        <div class="vault-status">Protocol: Succession & Estate Stewardship</div>
+        <p style="max-width: 850px; margin: 30px auto; font-style: italic; font-size: 1.2rem;">
+            "A legacy is not a memory; it is a verified record." 
+            The Retrieval Vault ensures that the character assets anchored in the <strong>Tree Protocol</strong> 
+            remain accessible to verified successors, maintaining the integrity of the family lineage for generations.
+        </p>
+    </section>
+
+    <section class="protocol-section">
+        <div class="protocol-card">
+            <h3>Successor Verification</h3>
+            <p>Access to a Character Estate requires the **Sovereign Successor Key** issued at the time of the original Identity Anchor. Beneficiaries must undergo a Level 1 Verification flow to establish their own link to the <strong>Tree</strong> before records are unsealed.</p>
+        </div>
+        <div class="protocol-card">
+            <h3>Archival Continuity</h3>
+            <p>All "Cape" utility and "Tree" heritage data are stored in a redundant, air-gapped vault managed by <strong>Solomon Kin LLC</strong>. This ensures that even in the event of digital shifts, your family's moral standing remains a physical asset of the estate.</p>
+        </div>
+    </section>
+
+    <section class="access-terminal">
+        <div class="terminal-box">
+            <h2 style="color: var(--gold); letter-spacing: 3px; margin-bottom: 40px;">ENTRANCE TO THE ANCESTRAL LEDGER</h2>
+            <form>
+                <input type="text" class="input-field" placeholder="ENTER ANCESTOR III-CIPHER">
+                <input type="password" class="input-field" placeholder="SOVEREIGN SUCCESSOR KEY">
+                <button type="button" class="action-btn">Request Estate Unsealing →</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <img src="iii.png" alt="Official III Seal" class="footer-seal">
+        <div style="color: var(--gold); font-weight: bold; letter-spacing: 5px; text-transform: uppercase;">A Solomon Kin LLC Trust Infrastructure</div>
+        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 20px;">
+            © 2026 Integrity Identification Index, Inc. | Division: Main-Legal_door. <br>
+            Estate Stewardship is governed by the Solomon Kin LLC Sovereign Charter.
+        </p>
+    </footer>
+
+</body>
+</html>
