@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III | Official Cipher Verification Terminal</title>
+    <style>
+        :root {
+            --midnight: #050A10;
+            --gold: #C5A059;
+            --crimson: #8B0000;
+            --terminal-green: #00FF41;
+            --slate: #D1D9E0;
+        }
+
+        body {
+            background-color: var(--midnight);
+            color: var(--slate);
+            font-family: 'Courier New', Courier, monospace; /* Secure Terminal Font */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Scanline Effect for Terminal Feel */
+        body::before {
+            content: " ";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .terminal-box {
+            width: 100%;
+            max-width: 650px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid var(--gold);
+            padding: 60px;
+            box-shadow: 0 0 50px rgba(197, 160, 89, 0.2);
+            position: relative;
+            z-index: 20;
+        }
+
+        .terminal-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .terminal-header h1 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .status-indicator {
+            color: var(--crimson);
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* Search Input */
+        .search-wrap {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .cipher-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid var(--gold);
+            color: var(--terminal-green);
+            font-size: 2rem;
+            text-align: center;
+            padding: 10px;
+            outline: none;
+            letter-spacing: 5px;
+        }
+
+        .verify-btn {
+            margin-top: 40px;
+            background: var(--gold);
+            color: var(--midnight);
+            border: none;
+            padding: 15px 40px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            width: 100%;
+        }
+
+        .verify-btn:hover {
+            background: white;
+        }
+
+        /* Verification Results (Hidden by default) */
+        .results-panel {
+            margin-top: 40px;
+            border: 1px dashed var(--gold);
+            padding: 20px;
+            display: none; /* Controlled by JS */
+        }
+
+        .footer-brand {
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--gold);
+            opacity: 0.5;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="terminal-box">
+        <div class="terminal-header">
+            <img src="iii.png" alt="III Shield" style="height: 60px; margin-bottom: 20px;">
+            <h1>Sovereign Validator</h1>
+            <div class="status-indicator">SECURE UPLINK: MAIN-LEGAL_DOOR</div>
+        </div>
+
+        <div class="search-wrap">
+            <label>Enter 12-Digit III-Cipher Key</label>
+            <input type="text" class="cipher-input" maxlength="12" placeholder="XXX-XXX-XXX-X">
+            <button class="verify-btn">Authenticate Record</button>
+        </div>
+
+        <div class="results-panel">
+            <div style="color: var(--gold); font-size: 0.7rem;">RECORD FOUND:</div>
+            <div style="font-size: 1.2rem; margin: 10px 0;">STATUS: <span style="color: var(--terminal-green);">SOVEREIGN ACTIVE</span></div>
+            <div style="font-size: 1rem;">INTEGRITY INDEX: 4.82</div>
+            <div style="font-size: 0.8rem; margin-top: 10px; color: var(--gold);">verified via Solomon Kin LLC Protocols</div>
+        </div>
+
+        <div class="footer-brand">
+            © 2026 Integrity Identification Index | Division: Main-Legal_door
+        </div>
+    </div>
+
+</body>
+</html>
