@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III | Legal Chamber: Statutory Protocols & Identity Vault</title>
+    <style>
+        :root {
+            --midnight: #001224;
+            --gold: #C5A059;
+            --crimson: #8B0000;
+            --slate: #D1D9E0;
+            --vault-gray: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--midnight);
+            color: var(--slate);
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* Sovereign Header */
+        .federal-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--midnight);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            z-index: 1000;
+        }
+
+        .header-left { display: flex; align-items: center; text-decoration: none; }
+        .header-left img { height: 75px; margin-right: 20px; }
+        .brand-text { color: var(--gold); font-size: 2.2rem; font-weight: bold; letter-spacing: 5px; }
+
+        /* Security Hero */
+        .legal-hero {
+            padding: 200px 15% 80px;
+            text-align: center;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        h1 { font-size: 3.5rem; color: var(--gold); margin: 0; text-transform: uppercase; }
+        .security-badge { color: var(--crimson); font-weight: bold; letter-spacing: 2px; margin-top: 10px; }
+
+        /* Data Protocol Sections */
+        .vault-specs {
+            padding: 80px 15%;
+            background-color: var(--vault-gray);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .spec-box {
+            border-left: 2px solid var(--gold);
+            padding-left: 30px;
+        }
+
+        .spec-box h3 { color: var(--gold); text-transform: uppercase; font-size: 1.4rem; }
+
+        /* Statutory Language */
+        .statutory-text {
+            padding: 80px 20%;
+            font-size: 0.95rem;
+            background: #000;
+            color: #888;
+            border-top: 1px solid var(--gold);
+        }
+
+        .statutory-text h2 { color: var(--gold); text-align: center; }
+
+        footer {
+            background: #000;
+            padding: 100px 60px 40px;
+            border-top: 3px solid var(--gold);
+            text-align: center;
+        }
+
+        .footer-logo { height: 100px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <header class="federal-header">
+        <a href="index.html" class="header-left">
+            <img src="iii.png" alt="III Official Logo">
+            <span class="brand-text">iii</span>
+        </a>
+        <div style="display: flex; gap: 20px;">
+            <a href="science.html" style="color: var(--gold); text-decoration: none; text-transform: uppercase; font-size: 0.8rem; border: 1px solid var(--gold); padding: 10px 20px;">Sovereign Science</a>
+            <a href="enterprise.html" style="color: var(--gold); text-decoration: none; text-transform: uppercase; font-size: 0.8rem; border: 1px solid var(--gold); padding: 10px 20px;">Enterprise Entry</a>
+        </div>
+    </header>
+
+    <section class="legal-hero">
+        <h1>The Main-Legal_door</h1>
+        <div class="security-badge">PROTOCOL: ZERO-TRUST IDENTITY ANCHORING</div>
+        <p style="max-width: 800px; margin: 30px auto; font-style: italic;">
+            "Character cannot be verified if the identity is not secured." 
+            The Legal Chamber serves as the statutory guardian of your Character Estate, 
+            utilizing federal-grade encryption to isolate and protect your PII.
+        </p>
+    </section>
+
+    <section class="vault-specs">
+        <div class="spec-box">
+            <h3>SSN Vault Encryption</h3>
+            <p>Your Social Security Number is never stored in a readable format. Upon ingestion, the data is passed through a **one-way cryptographic hash**, creating your unique III-Cipher. The original data is then moved to a disconnected, air-gapped "cold vault" managed by <strong>Solomon Kin LLC</strong>.</p>
+        </div>
+        <div class="spec-box">
+            <h3>PII Isolation</h3>
+            <p>Personally Identifiable Information (PII) is isolated from your public Character Ledger. While your "Cape" of good deeds is portable, your legal anchors remain behind the <strong>Main-Legal_door</strong>, accessible only through multi-factor biometric authentication.</p>
+        </div>
+    </section>
+
+    <section class="statutory-text">
+        <h2>Legal Compliance & Disclosure</h2>
+        <p>The <strong>Integrity Identification Index</strong> operates in strict accordance with Federal Data Privacy acts. We treat "Character Records" as a non-fungible legal property. Under the <strong>Solomon Kin LLC</strong> charter, we are prohibited from selling, renting, or leasing your identity data to third-party advertisers. Your character is your estate; we are merely the executors of its record.</p>
+        <p>By engaging in the <strong>Identity Anchor</strong> flow, you consent to the statutory verification of your credentials against state and federal databases to ensure the absolute integrity of the Global Ledger.</p>
+    </section>
+
+    <footer>
+        <img src="iii.png" alt="III Official Seal" class="footer-logo">
+        <div style="color: var(--gold); font-weight: bold; letter-spacing: 3px;">OFFICIAL SEAL OF CHARACTER VERIFICATION</div>
+        <p style="font-size: 0.75rem; opacity: 0.5; margin-top: 20px;">
+            © 2026 Integrity Identification Index, Inc. | A Solomon Kin LLC Subsidiary. <br>
+            All Identity Anchoring is protected by 4096-bit RSA Encryption.
+        </p>
+    </footer>
+
+</body>
+</html>
