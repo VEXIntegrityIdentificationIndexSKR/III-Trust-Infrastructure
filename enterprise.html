@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III | Enterprise Entry: Corporate Integrity & Collective Capes</title>
+    <style>
+        :root {
+            --midnight: #001224; /* Deep Federal Navy */
+            --gold: #C5A059;     /* Burnished Executive Gold */
+            --gold-light: #E1C18D;
+            --crimson: #8B0000;  /* Deep Blood Red for Legal Seals */
+            --slate: #D1D9E0;
+            --deep-black: #000a14;
+        }
+
+        body {
+            background-color: var(--midnight);
+            color: var(--slate);
+            font-family: 'Times New Roman', Times, serif; /* Legal Standard */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Sovereign Header */
+        .federal-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--midnight);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            z-index: 1000;
+        }
+
+        .header-left { display: flex; align-items: center; }
+        .header-left img { height: 70px; margin-right: 20px; }
+        .brand-text { color: var(--gold); font-size: 2.2rem; font-weight: bold; letter-spacing: 5px; text-decoration: none; }
+
+        .nav-cluster { display: flex; gap: 20px; }
+        .nav-btn {
+            background: rgba(197, 160, 89, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .nav-btn:hover { background: var(--gold); color: var(--midnight); }
+
+        /* Hero / Sales Narrative */
+        .enterprise-hero {
+            padding: 180px 15% 100px;
+            text-align: center;
+            background: radial-gradient(circle at center, #002b55 0%, var(--midnight) 75%);
+            border-bottom: 1px solid var(--gold);
+        }
+
+        h1 { font-size: 3.5rem; color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 3px; }
+        .hero-sub { color: var(--crimson); font-weight: bold; font-size: 1.1rem; margin-top: 10px; text-transform: uppercase; }
+        .hero-desc { max-width: 850px; margin: 30px auto; font-size: 1.2rem; color: var(--slate); }
+
+        /* The Collective Cape Section */
+        .collective-cape {
+            padding: 80px 10%;
+            background-color: #000a14;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .cape-graphic {
+            border: 2px solid var(--gold);
+            padding: 40px;
+            background: var(--midnight);
+            text-align: center;
+        }
+
+        .cape-graphic h3 { color: var(--gold); margin-top: 0; }
+
+        .sales-copy h2 { color: var(--gold); font-size: 2.5rem; margin-top: 0; border-bottom: 2px solid var(--crimson); padding-bottom: 10px; }
+
+        /* Tiered Solutions */
+        .solutions-grid {
+            padding: 100px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .solution-card {
+            background: var(--midnight);
+            border: 1px solid #1a3a5a;
+            padding: 50px;
+            transition: 0.4s;
+        }
+
+        .solution-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .solution-card h3 { color: var(--gold); font-size: 1.8rem; border-bottom: 1px solid var(--gold); padding-bottom: 15px; }
+        
+        .spec-list { list-style: none; padding: 0; margin-bottom: 30px; font-size: 0.9rem; }
+        .spec-list li { margin-bottom: 15px; border-bottom: 1px solid rgba(197, 160, 89, 0.1); padding-bottom: 5px; }
+
+        .execute-btn {
+            display: block;
+            background: var(--gold);
+            color: var(--midnight);
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        /* Sovereign Footer */
+        footer {
+            background: #000;
+            padding: 100px 60px 40px;
+            border-top: 3px solid var(--gold);
+            text-align: center;
+        }
+
+        .footer-logo { height: 100px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <header class="federal-header">
+        <a href="index.html" class="header-left">
+            <img src="iii.png" alt="III Official Logo">
+            <span class="brand-text">iii</span>
+        </a>
+        <div class="nav-cluster">
+            <a href="science.html" class="nav-btn">Sovereign Science</a>
+            <a href="legal-door.html" class="nav-btn">Legal Chamber</a>
+            <a href="#" class="nav-btn">Enterprise Login</a>
+        </div>
+    </header>
+
+    <section class="enterprise-hero">
+        <h1>Enterprise Integrity Index</h1>
+        <div class="hero-sub">Risk Mitigation & Trust Infrastructure for Sovereign Entities</div>
+        <p class="hero-desc">
+            "A corporation is only as strong as the cumulative integrity of its personnel nodes." 
+            The EII provides the B2B framework for verifying, benchmarking, and protecting the collective 
+            character asset of your entire organization.
+        </p>
+    </section>
+
+    <section class="collective-cape">
+        <div class="cape-graphic">
+            <img src="cape-utility.png" alt="Collective Cape Icon" style="height: 120px; margin-bottom: 20px;">
+            <h3>THE COLLECTIVE CAPE (EII)</h3>
+            <p style="font-size: 0.85rem; color: var(--gold);">Cumulative Score of All Archived Personnel</p>
+        </div>
+        <div class="sales-copy">
+            <h2>Asset Protection</h2>
+            <p>Your company has a "reputation aura." It is built by your employees, educators, and tradespeople. The <strong>Collective Cape</strong> is the quantified measurement of that aura. By hiring III-Cipher holders, you directly increase your Enterprise Integrity Index, making your firm more attractive to premium clients, investors, and partners.</p>
+        </div>
+    </section>
+
+    <section class="solutions-grid">
+        <div class="solution-card">
+            <h3>TRADE VERIFIED</h3>
+            <p style="color: var(--crimson); font-weight: bold;">Professional Trade Contractors</p>
+            <ul class="spec-list">
+                <li>Instant verification of subcontractor Ciphers.</li>
+                <li>Mitigation of "Shadow" risks in field operations.</li>
+                <li>The III Seal for marketing local reliability.</li>
+            </ul>
+            <a href="#" class="execute-btn">Verify Trade</a>
+        </div>
+
+        <div class="solution-card" style="border-color: var(--gold);">
+            <h3>CIVIC ENTERPRISE</h3>
+            <p style="color: var(--crimson); font-weight: bold;">Educators & Non-Profits</p>
+            <ul class="spec-list">
+                <li>High-vault security for background screening.</li>
+                <li>Collective Cape tracking for relational duty.</li>
+                <li>Priority character appeals for staff.</li>
+            </ul>
+            <a href="#" class="execute-btn">Audit Institution</a>
+        </div>
+
+        <div class="solution-card">
+            <h3>SOVEREIGN CORPORATE</h3>
+            <p style="color: var(--crimson); font-weight: bold;">Large Scale Corporations</p>
+            <ul class="spec-list">
+                <li>Full API integration for HR screening.</li>
+                <li>Quarterly EII (Enterprise) benchmarking.</li>
+                <li>Shadow Protocol risk mitigation analysis.</li>
+            </ul>
+            <a href="#" class="execute-btn">Access Ledger</a>
+        </div>
+    </section>
+
+    <footer>
+        <img src="iii.png" alt="III Official Seal" class="footer-logo">
+        <p style="color: var(--gold); font-weight: bold; letter-spacing: 2px;">OFFICIAL SEAL OF CHARACTER VERIFICATION</p>
+        <p style="font-size: 0.8rem; opacity: 0.5;">
+            © 2026 Integrity Identification Index, Inc. | Division: Main-Legal_door | Solomon Kin LLC <br>
+            All Enterprise Ratings are calculated via Sovereign Science Psychometrics.
+        </p>
+    </footer>
+
+</body>
+</html>
