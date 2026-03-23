@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>III | Official Certificate of Integrity</title>
+    <style>
+        :root {
+            --midnight: #001224;
+            --gold: #C5A059;
+            --crimson: #8B0000;
+            --ink: #1a1a1a;
+            --parchment: #FDFCF0; /* Classic high-grade paper color */
+        }
+
+        body {
+            background-color: #222; /* Dark background to make the certificate pop */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* The Physical Certificate Container */
+        .certificate-border {
+            background-color: var(--parchment);
+            width: 850px;
+            padding: 10px;
+            border: 15px double var(--gold);
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        .certificate-inner {
+            border: 2px solid var(--midnight);
+            padding: 60px;
+            text-align: center;
+            height: 100%;
+        }
+
+        /* Branding & Headers */
+        .cert-header { color: var(--midnight); text-transform: uppercase; letter-spacing: 5px; margin-bottom: 10px; }
+        .cert-sub { color: var(--crimson); font-weight: bold; font-size: 0.9rem; letter-spacing: 2px; }
+
+        .iii-id { font-size: 4rem; color: var(--midnight); margin: 20px 0; font-weight: bold; opacity: 0.1; position: absolute; top: 40px; right: 60px; }
+
+        /* The Person & The Cipher */
+        .recipient-name {
+            font-size: 3.5rem;
+            color: var(--midnight);
+            margin: 40px 0 10px;
+            border-bottom: 1px solid var(--gold);
+            display: inline-block;
+            padding: 0 40px;
+        }
+
+        .cipher-display {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+            color: var(--crimson);
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        /* The Core Metrics */
+        .stats-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+            border-top: 1px solid var(--gold);
+            border-bottom: 1px solid var(--gold);
+            padding: 20px 0;
+        }
+
+        .stat-item { text-align: center; }
+        .stat-label { font-size: 0.7rem; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+        .stat-val { font-size: 1.8rem; color: var(--midnight); font-weight: bold; }
+
+        /* Footer & Official Seal */
+        .cert-footer {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            text-align: left;
+        }
+
+        .signature-line { border-top: 1px solid var(--ink); width: 250px; margin-top: 40px; padding-top: 5px; font-size: 0.8rem; }
+        
+        .official-seal-img {
+            height: 160px; /* Highly enlarged as requested */
+            margin-bottom: -20px;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--gold);
+            color: var(--midnight);
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="certificate-border">
+        <div class="certificate-inner">
+            <div class="iii-id">iii</div>
+            
+            <div class="cert-header">Integrity Identification Index</div>
+            <div class="cert-sub">Division: Main-Legal_door | Solomon Kin LLC</div>
+
+            <div style="margin-top: 40px; font-size: 1.2rem; font-style: italic;">This is to certify the character asset of:</div>
+            <div class="recipient-name">NEHEMIAH M. BROWN</div>
+            <div class="cipher-display">CIPHER ID: III-772-GRN-9</div>
+
+            <p style="max-width: 600px; margin: 0 auto; font-size: 0.95rem;">
+                The above-named individual has successfully completed the <strong>Sovereign Identity Anchor</strong> 
+                and the <strong>Federal Integrity Audit</strong>. Their character has been verified as a 
+                permanent legal asset within the Global Ledger.
+            </p>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-label">Index Score</div>
+                    <div class="stat-val">4.82</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Certification Tier</div>
+                    <div class="stat-val">SOVEREIGN</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Verified Deeds</div>
+                    <div class="stat-val">128</div>
+                </div>
+            </div>
+
+            <div class="cert-footer">
+                <div>
+                    <div class="signature-line">Authorizing Executive | Solomon Kin LLC</div>
+                    <div class="signature-line" style="width: 180px;">Date of Certification</div>
+                </div>
+                <div style="text-align: center;">
+                    <img src="iii.png" alt="Official III Seal" class="official-seal-img">
+                    <div style="font-size: 0.6rem; letter-spacing: 2px; font-weight: bold; margin-top: 5px;">OFFICIAL SEAL OF VERIFICATION</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">PRINT LEGAL COPY</button>
+
+</body>
+</html>
